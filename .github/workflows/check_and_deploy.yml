@@ -23,7 +23,7 @@ jobs:
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
-      - uses: actions/upload./artifact@master
+      - uses: actions/upload-artifact@master
         with:
           name: release.apk
           path: ${{steps.sign_app.outputs.signedReleaseFile}}
